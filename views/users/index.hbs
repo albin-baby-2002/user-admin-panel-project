@@ -1,0 +1,23 @@
+<h1 class="container fw-bold mt-3 w-75 text-center">Latest Product @ Great Discount Price </h1>
+
+<section class="container ">
+
+    <div class="container mt-4 d-flex justify-content-between  mb-5 row">
+
+        {{#each products}}
+
+        <div class=" col-md-3 card my-5 " style="width: 20rem; ">
+            <img src="/product-images/{{this._id}}.png" class="card-img-top my-3  " alt="...">
+            <div class="card-body">
+                <p class="card-title fs-4 fw-bold"> {{this.name}} </p>
+                <p class="card-text fs-6">{{this.description}} </p>
+                <p class="card-text fs-4 fw-bold"> Rs.{{this.price}} </p>
+                <a href="#" class="btn btn-primary"> Buy now </a>
+            </div>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</section>

@@ -1,0 +1,44 @@
+<section class="container mt-5">
+
+    {{#if message}}
+
+    <h2 class=" fw-bolder text-center my-4 text-{{color}}">{{message}}</h2>
+
+    {{else}}
+
+
+    {{/if}}
+
+
+
+    <table class=" table text-center">
+        <thead>
+            <tr>
+                <th scope="col ">User ID</th>
+                <th scope="col"> User Name</th>
+                <th scope="col px-4">User Email</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each Users}}
+            <tr>
+
+                <td class="p-4">{{this._id}}</td>
+                <td class="p-4">{{this.username}}</td>
+                <td class="p-4">{{this.email}}</td>
+                <td><a class="btn btn-success m-2" href="/admin/update/{{this._id}}">Update</a></td>
+                <td> <a class="btn btn-danger m-2" href="/admin/delete/{{this._id}}">Delete</a></td>
+
+
+            </tr>
+
+            {{/each}}
+
+
+        </tbody>
+    </table>
+
+</section>
